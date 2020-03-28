@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "A killer app.",
   "main": "index.js",
-  "author": "Benjamin Debotté, Nathan Patry, Rodrigue Couanon",
+  "author": "Benjamin Debotté, Nathan Patry, Rodrique Couanon",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server -w --config webpack/webpack.config.js"
