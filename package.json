@@ -1,0 +1,36 @@
+{
+  "name": "killer-app",
+  "version": "0.0.0",
+  "description": "A killer app.",
+  "main": "index.js",
+  "author": "Benjamin Debotté, Nathan Patry, Rodrique Couanon",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server -w --config webpack/webpack.config.js"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.26",
+    "@types/react-dom": "^16.9.5",
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^3.4.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.0.2",
+    "node-sass": "^4.13.1",
+    "raw-loader": "^4.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "tslint": "^6.1.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.8.3",
+    "typings": "^2.1.1",
+    "url-loader": "^4.0.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
