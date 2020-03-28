@@ -39,7 +39,7 @@ module.exports = {
       template: './index.html',
       filename: 'index.html',
       showErrors: true,
-      title: 'React-TS-Webpack App',
+      title: 'Killer App',
       path: path.join(__dirname, '../dist/'),
       hash: true
     })
