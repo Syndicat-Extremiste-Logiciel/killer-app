@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Greet from './components/greet';
+import Router from './components/router';
 
-// TODO - Create APP loader with Socket Connection + Redux + Router
-
-ReactDOM.render(<Greet />, document.getElementById('app'));
+// TODO: Create APP loader with Socket Connection + Redux + Router
+ReactDOM.render(<Router />, document.getElementById('app'));
