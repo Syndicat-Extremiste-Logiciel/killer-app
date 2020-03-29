@@ -4,11 +4,11 @@ import Profile from '../profile';
 import Game from '../game';
 
 interface RouterState {
-    currentPath : string
+    currentPath: string;
 }
 
 export default class Router extends PureComponent<{}, RouterState> {
-    constructor (props: any) {
+    constructor(props: any) {
         super(props);
 
         this.state = {
@@ -16,7 +16,7 @@ export default class Router extends PureComponent<{}, RouterState> {
         };
     }
 
-    componentDidMount () {
+    componentDidMount() {
         window.addEventListener('popstate', this.handleUrlChange);
     }
 
@@ -24,25 +24,48 @@ export default class Router extends PureComponent<{}, RouterState> {
         this.setState({
             currentPath: document.location.hash
         });
-    }
+    };
 
-    goTo = (url : string) => window.location.hash = `#/${url}`
+    goTo = (url: string) => (window.location.hash = `#/${url}`);
 
-    render () {
-        let parts : Array<string> = this.state.currentPath.split('/');
+    render() {
+        const parts: Array<string> = this.state.currentPath.split('/');
         parts.shift(); // Remove '#'
 
         // TODO: Check user authentication
+        // TODO: Middleware
         switch (parts[0]) {
             case 'profile':
-                return <Profile user={{ id: '1', firstName: 'Bruce', lastName: 'Wayne' }} />;
+                return (
+                    <Profile
+                        user={{
+                            id: '1',
+                            firstName: 'Bruce',
+                            lastName: 'Wayne'
+                        }}
+                    />
+                );
             case 'game':
-                return <Game user={{ id: '1', firstName: 'Bruce', lastName: 'Wayne' }}
-                            gameDetails={{ target : { id: '2', firstName: 'Arthur', lastName: 'Fleck' }}} />;
+                return (
+                    <Game
+                        user={{
+                            id: '1',
+                            firstName: 'Bruce',
+                            lastName: 'Wayne'
+                        }}
+                        gameDetails={{
+                            target: {
+                                id: '2',
+                                firstName: 'Arthur',
+                                lastName: 'Fleck'
+                            }
+                        }}
+                    />
+                );
             default:
                 return <Login onLogin={this.handleLogin} />;
         }
     }
 
-    handleLogin = () => this.goTo('game')
+    handleLogin = () => this.goTo('game');
 }

@@ -11,4 +11,7 @@ module.exports = {
     'prettier',
     'prettier/react'
   ],
+  rules: {
+    "@typescript-eslint/explicit-function-return-type": "off",
+  }
 };
